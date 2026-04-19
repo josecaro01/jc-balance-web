@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+/* =========================
+   DESIGN TOKENS
+   ========================= */
+
+
+
+@theme {
+
+    /* PAGE */
+
+    --color-page-bg: #ffffff;
+    --color-page-text: #212529;
+
+    /* PRIMARY */
+
+    --color-primary: #2563eb;
+    --color-primary-hover: #1d4ed8;
+    --color-primary-text: #ffffff;
+
+    /* SECONDARY */
+
+    --color-secondary: #7c3aed;
+    --color-secondary-hover: #6d28d9;
+    --color-secondary-text: #ffffff;
+
+    /* SURFACE */
+
+    --color-surface: #f8f9fa;
+    --color-card: #ffffff;
+    --color-border: #e5e7eb;
+
+
+    --animate-fade-in: fade-in 0.4s ease-out;
+
+    @keyframes fade-in {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+}
+
+/* =========================
+   DARK MODE
+   ========================= */
+
+[data-theme="dark"] {
+
+    color-scheme: dark;
+
+    /* PAGE */
+
+    --color-page-bg: #0f172a;
+    --color-page-text: #e2e8f0;
+
+    /* PRIMARY */
+
+    --color-primary: #3b82f6;
+    --color-primary-hover: #60a5fa;
+
+    /* SECONDARY */
+
+    --color-secondary: #8b5cf6;
+    --color-secondary-hover: #a78bfa;
+
+    /* SURFACE */
+
+    --color-surface: #111827;
+    --color-card: #1f2937;
+    --color-border: #374151;
+}
+
+/* =========================
+   BASE LAYER
+   ========================= */
+
+@layer base {
+
+    body {
+        background-color: var(--color-page-bg);
+        color: var(--color-page-text);
+        transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+}

@@ -1,0 +1,1 @@
+export { CategorySelectComponent } from './CategorySelectComponent';
