@@ -4,3 +4,4 @@ export { LoadingComponent } from './LoadingComponent';
 export { DateSelectorComponent } from './DateSelectorComponent';
 export { SnackbarComponent } from './SnackbarComponent';
 export { SelectComponent } from './SelectComponent';
+export { PaginationComponent } from './PaginationComponent';

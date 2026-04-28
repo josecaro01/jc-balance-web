@@ -8,7 +8,7 @@
       const storageData = localStorage.getItem('ui-preferences');
       const savedPreferences = storageData ? JSON.parse(storageData) : null;
       const savedTheme = savedPreferences?.state?.theme;
-   
+
       const isDark = savedTheme === 'dark' ||
         (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches);
 
@@ -23,7 +23,11 @@
   </script>
   <meta name="description"
     content="JC Balance is a professional-grade web application designed for comprehensive personal finance management. It empowers users to track income and expenses, visualize financial trends through interactive charts, and manage their budget with a clean, multi-language interface.">
- 
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:title" content="JC Balance - Personal Finance Management">
+  <meta property="og:image" content="/src/assets/logo/jc_balance_icon.webp">
+  <meta name="twitter:card"
+    content="JC Balance is a professional-grade web application designed for comprehensive personal finance management.">
   <link rel="icon" href="/jc_balance_icon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>JC Balance</title>

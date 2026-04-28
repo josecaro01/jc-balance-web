@@ -17,7 +17,7 @@ export const DeleteTransactionModal = ({
 }: Props) => {
 
   const { t } = useTranslation();
-  const { deleteTransaction } = useTransactions(null);
+  const { deleteTransaction } = useTransactions();
   const { showSnackbar } = useSnackbar();
 
   const onDelete = async () => {

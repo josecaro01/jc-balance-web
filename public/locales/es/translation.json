@@ -111,5 +111,12 @@
   "passwordChangedSuccess": "¡Contraseña cambiada con éxito!",
   "errorChangingPassword": "Error al cambiar la contraseña",
   "labelOldPassword": "Contraseña actual",
-  "noDataAvailable": "No hay datos disponibles"
+  "noDataAvailable": "No hay datos disponibles",
+  "showingResults_one": "Mostrando {{count}} resultado de {{totalResults}}",
+  "showingResults_other": "Mostrando {{count}} resultados de {{totalResults}}",
+  "noResultsFound": "No se encontraron resultados",
+  "previous": "Anterior",
+  "next": "Siguiente",
+  "noResults": "Sin resultados",
+  "noResultsDesc": "No encontramos transacciones que coincidan con tu búsqueda o filtros"
 }

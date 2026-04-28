@@ -33,7 +33,7 @@ export const UpdateProfileModal = ({ open, onClose, }: Props) => {
 
     const { fields, errors, serverState, isPending, isFormValid, handleChange, handleSubmit } = useActionForm({
         action: updateUserAction,
-        initialState: { name: '', lastName: '' },
+        initialState: { name: user?.name, lastName: user?.lastName },
         validate: (values) => {
             const errs: any = {};
             if (values.name === 'name' && !values.name.trim()) errs.name = t('errorFirstNameRequired');
@@ -69,7 +69,7 @@ export const UpdateProfileModal = ({ open, onClose, }: Props) => {
                     <InputComponent
                         name="name"
                         label={t('labelFirstName')}
-                        defaultValue={user?.name || ""}
+                     
                         value={fields.name}
                         onChange={handleChange}
                         error={errors.name || undefined}
@@ -79,7 +79,7 @@ export const UpdateProfileModal = ({ open, onClose, }: Props) => {
                     <InputComponent
                         name="lastName"
                         label={t('labelLastName')}
-                        defaultValue={user?.lastName || ""}
+                      
                         value={fields.lastName}
                         onChange={handleChange}
                         error={errors.lastName || undefined}

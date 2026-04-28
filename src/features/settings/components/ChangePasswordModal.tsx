@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { useAuth } from '@features/auth/hooks';
-import {  ButtonComponent, InputComponent } from '@shared/components';
+import { ButtonComponent, InputComponent } from '@shared/components';
 import { useActionForm, useSnackbar } from '@shared/hooks';
 
 interface Props {
@@ -101,21 +101,30 @@ export const ChangePasswordModal = ({ open, onClose, }: Props) => {
                         </div>
                     )}
 
-
-                    <ButtonComponent
-                        type="submit"
-                        disabled={isPending || !isFormValid}
-                        className='w-full'
-                    >
-                        {isPending ? (
-                            <div className="flex items-center justify-center gap-2">
-                                <div className="w-5 h-5 border-2 border-primary-text/30 border-t-primary-text rounded-full animate-spin" />
-                                {t('statusValidating')}
-                            </div>
-                        ) : (
-                            t('changePassword')
-                        )}
-                    </ButtonComponent>
+                    <div className="flex justify-end gap-3 mt-8">
+                        <ButtonComponent
+                            type="button"
+                            className='w-full'
+                            onClick={onClose}
+                            variant="outlined"
+                        >
+                            {t('cancel')}
+                        </ButtonComponent>
+                        <ButtonComponent
+                            type="submit"
+                            disabled={isPending || !isFormValid}
+                            className='w-full'
+                        >
+                            {isPending ? (
+                                <div className="flex items-center justify-center gap-2">
+                                    <div className="w-5 h-5 border-2 border-primary-text/30 border-t-primary-text rounded-full animate-spin" />
+                                    {t('statusValidating')}
+                                </div>
+                            ) : (
+                                t('changePassword')
+                            )}
+                        </ButtonComponent>
+                    </div>
                 </form>
             </div>
         </div>

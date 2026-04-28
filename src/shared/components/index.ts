@@ -1,3 +1,3 @@
 export { HomeIcon, SettingIcon, TransactionIcon, AddIcon, EditIcon, TrashIcon, SunIcon, MoonIcon, GlobeIcon, CurrencyIcon, UserIcon, LockIcon, LockEyeIcon, UnlockEyeIcon, LogoutIcon, PieChartIcon, TrendIcon } from './icons';
 export { MainLayout, Sidebar } from './layout';
-export { InputComponent, ButtonComponent, LoadingComponent, DateSelectorComponent, SnackbarComponent, SelectComponent } from './ui';
+export { InputComponent, ButtonComponent, LoadingComponent, DateSelectorComponent, SnackbarComponent, SelectComponent, PaginationComponent } from './ui';

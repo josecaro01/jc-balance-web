@@ -17,7 +17,7 @@ export const SetTransactionModal = ({ open, onClose, transaction, }: Props) => {
   const { t } = useTranslation();
   const { user } = useAuth();
   const { showSnackbar } = useSnackbar();
-  const { createTransaction, updateTransaction } = useTransactions(null);
+  const { createTransaction, updateTransaction } = useTransactions();
   const [errors, setErrors] = useState<Record<string, string | null>>({});
 
   const handleAction = async (_: any, formData: FormData) => {

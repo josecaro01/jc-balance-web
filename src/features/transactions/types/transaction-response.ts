@@ -1,7 +1,9 @@
-import type { Transaction, TransactionFilters } from "../";
+import type { PaginatedResult } from "@shared/types";
+import type { Transaction } from "./transaction";
+import type { TransactionFilters } from "./transaction-filters";
 
 export interface TransactionsResponse {
-  transactions: Transaction[];
+  transactions: PaginatedResult<Transaction>;
   appliedFilters: TransactionFilters;
-  totalResults: number;
+  summaryBalance: { income: number; expense: number; balance: number; }
 }

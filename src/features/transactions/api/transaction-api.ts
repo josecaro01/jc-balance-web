@@ -1,10 +1,11 @@
 import { apiClient } from "@shared/api";
 import type { TransactionFilters, TransactionsResponse,Transaction } from "../types";
+import type { PageParams } from "@shared/types";
 
 
 
-export const getTransactions = async (transactionFilters: TransactionFilters): Promise<TransactionsResponse> => {
-    const { data } = await apiClient.post<TransactionsResponse>(`/transactions/search`, transactionFilters);
+export const getTransactions = async (transactionFilters: TransactionFilters,pageParams:PageParams): Promise<TransactionsResponse> => {
+    const { data } = await apiClient.post<TransactionsResponse>(`/transactions/search`, transactionFilters,{params: pageParams});
     return data;
 }
 

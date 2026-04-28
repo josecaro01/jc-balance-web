@@ -111,5 +111,12 @@
   "passwordChangedSuccess": "Password changed successfully!",
   "errorChangingPassword": "Error changing password",
   "labelOldPassword": "Current password",
-  "noDataAvailable": "No data available"
+  "noDataAvailable": "No data available",
+  "showingResults_one": "Showing {{count}} result of {{totalResults}}",
+  "showingResults_other": "Showing {{count}} results of {{totalResults}}",
+  "noResultsFound": "No results found",
+  "previous": "Previous",
+  "next": "Next",
+   "noResults": "No results",
+  "noResultsDesc": "No transactions found that match your search or filters"
 }
